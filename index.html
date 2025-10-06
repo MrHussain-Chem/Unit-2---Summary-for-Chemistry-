@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAQ Unit 2 Chemistry - Complete Revision</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f3f4f6; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 1rem; }
+        .header { background: white; border-bottom: 1px solid #e5e7eb; padding: 1rem; margin-bottom: 1rem; }
+        .header h1 { font-size: 1.5rem; font-weight: bold; margin-bottom: 0.25rem; }
+        .header p { font-size: 0.875rem; color: #6b7280; }
+        .print-btn { margin-top: 0.75rem; padding: 0.5rem 1rem; background: #2563eb; color: white; border: none; border-radius: 0.375rem; cursor: pointer; }
+        .print-btn:hover { background: #1d4ed8; }
+        .tabs { background: white; border-bottom: 1px solid #e5e7eb; margin-bottom: 1rem; }
+        .tab-buttons { display: flex; gap: 0.5rem; padding: 0.5rem 1rem; overflow-x: auto; }
+        .tab-btn { padding: 0.5rem 1rem; border: none; font-weight: 500; cursor: pointer; border-radius: 0.375rem 0.375rem 0 0; white-space: nowrap; }
+        .tab-btn:hover { opacity: 0.8; }
+        .tab-btn.active { border-bottom: 2px solid currentColor; }
+        .tab-btn.blue { color: #1e3a8a; background: #dbeafe; }
+        .tab-btn.green { color: #14532d; background: #dcfce7; }
+        .tab-btn.purple { color: #581c87; background: #f3e8ff; }
+        .tab-btn.orange { color: #7c2d12; background: #fed7aa; }
+        .tab-btn.pink { color: #831843; background: #fce7f3; }
+        .tab-btn.gray { color: #1f2937; background: #f9fafb; }
+        .content-area { border: 2px solid; border-radius: 0.5rem; padding: 1.5rem; }
+        .content-area.blue { background: #dbeafe; border-color: #93c5fd; color: #1e3a8a; }
+        .content-area.green { background: #dcfce7; border-color: #86efac; color: #14532d; }
+        .content-area.purple { background: #f3e8ff; border-color: #d8b4fe; color: #581c87; }
+        .content-area.orange { background: #fed7aa; border-color: #fdba74; color: #7c2d12; }
+        .content-area.pink { background: #fce7f3; border-color: #f9a8d4; color: #831843; }
+        .content-area.gray { background: #f9fafb; border-color: #d1d5db; color: #1f2937; }
+        .content-area h2 { font-size: 1.5rem; margin-bottom: 1rem; }
+        .section { margin-bottom: 1rem; border: 1px solid #d1d5db; border-radius: 0.5rem; overflow: hidden; background: white; }
+        .section-header { width: 100%; padding: 0.75rem 1rem; background: white; border: none; text-align: left; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; }
+        .section-header:hover { background: #f9fafb; }
+        .section-content { padding: 1rem; border-top: 1px solid #e5e7eb; display: none; }
+        .section-content.active { display: block; }
+        .key-def { margin-bottom: 0.75rem; padding: 0.75rem 0.75rem 0.75rem 1rem; background: #fef3c7; border-left: 4px solid #fbbf24; border-radius: 0.25rem; }
+        .key-def strong { color: #92400e; }
+        .example { margin-bottom: 0.75rem; padding: 0.75rem; background: #dbeafe; border-left: 4px solid #3b82f6; border-radius: 0.25rem; font-size: 0.875rem; }
+        .example strong { color: #1e3a8a; }
+        .tip { margin-bottom: 0.75rem; padding: 0.75rem; background: #dcfce7; border-left: 4px solid #22c55e; border-radius: 0.25rem; font-size: 0.875rem; }
+        .tip strong { color: #14532d; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        ul, ol { margin-left: 1.5rem; margin-top: 0.5rem; }
+        li { margin-bottom: 0.5rem; }
+        table { width: 100%; margin-top: 0.5rem; font-size: 0.875rem; border-collapse: collapse; }
+        table th, table td { border: 1px solid #d1d5db; padding: 0.5rem; }
+        table thead { background: #f3f4f6; }
+        .footer { margin-top: 1.5rem; text-align: center; font-size: 0.875rem; color: #6b7280; }
+        @media print {
+            body { background: white; }
+            .header, .tabs, .print-btn, .footer { display: none; }
+            .section-content { display: block !important; }
+            .content-area { border: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>AAQ Applied Science Unit 2 Chemistry - Complete Revision</h1>
+            <p>Interactive Revision Summary Sheets | First Assessment: May/June 2026</p>
+            <button class="print-btn" onclick="window.print()">🖨️ Print Current Sheet</button>
+        </div>
+    </div>
+
+    <div class="tabs">
+        <div class="container">
+            <div class="tab-buttons">
+                <button class="tab-btn blue active" onclick="switchTab('A')">Atomic Structure</button>
+                <button class="tab-btn green" onclick="switchTab('B')">Bonding & Structure</button>
+                <button class="tab-btn purple" onclick="switchTab('C')">Periodicity</button>
+                <button class="tab-btn orange" onclick="switchTab('D')">Physical Chemistry</button>
+                <button class="tab-btn pink" onclick="switchTab('E')">Organic Chemistry</button>
+                <button class="tab-btn gray" onclick="switchTab('CMD')">Command Words</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- CONTENT AREA A: ATOMIC STRUCTURE -->
+        <div id="tab-A" class="tab-content active">
+            <div class="content-area blue">
+                <h2>Content Area A: Atomic Structure</h2>
+                
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">A1.1 Features of the Periodic Table <span>▼</span></button>
+                    <div class="section-content">
+                        <div class="key-def"><strong>Atomic number:</strong> Number of protons in the nucleus of an atom</div>
+                        <div class="key-def"><strong>Mass number:</strong> Total number of protons and neutrons in the nucleus</div>
+                        <div class="key-def"><strong>Isotopes:</strong> Atoms of the same element with different numbers of neutrons</div>
+                        <div class="key-def"><strong>Relative atomic mass:</strong> Weighted average mass of all isotopes of an element relative to 1/12 the mass of carbon-12</div>
+                        <div class="example"><strong>Example: Calculating relative atomic mass</strong><div style="margin-top:0.5rem">Chlorine has two isotopes: Cl-35 (75%) and Cl-37 (25%)<br>Ar = (35 × 75/100) + (37 × 25/100) = 26.25 + 9.25 = <strong>35.5</strong></div></div>
+                        <div class="tip"><strong>💡 Application Tip:</strong><div style="margin-top:0.25rem">Use atomic and mass numbers to find protons, neutrons, and electrons. For ions, adjust electrons based on charge.</div></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">A1.2 Electronic Structure <span>▼</span></button>
+                    <div class="section-content">
+                        <div class="key-def"><strong>Energy levels (shells):</strong> Fixed energy levels where electrons orbit the nucleus</div>
+                        <div class="key-def"><strong>Subshells:</strong> Subdivisions of energy levels (s, p, d, f)</div>
+                        <div class="key-def"><strong>Orbital:</strong> Region of space where there is a high probability of finding an electron</div>
+                        <div style="margin-bottom:0.75rem"><strong>Electron filling rules:</strong><ol><li><strong>Aufbau principle:</strong> Fill lowest energy orbitals first</li><li><strong>Pauli exclusion principle:</strong> Maximum 2 electrons per orbital with opposite spins</li><li><strong>Hund's rule:</strong> Orbitals of equal energy filled singly before pairing</li></ol></div>
+                        <div class="example"><strong>Example: Electronic configuration of Calcium (Ca, Z=20)</strong><div style="margin-top:0.5rem">1s² 2s² 2p⁶ 3s² 3p⁶ 4s²</div></div>
+                        <div class="tip"><strong>💡 Application Tip:</strong><div style="margin-top:0.25rem">Remember 4s fills before 3d! Order: 1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p...</div></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">A1.3 Ionisation Energy <span>▼</span></button>
+                    <div class="section-content">
+                        <div class="key-def"><strong>First ionisation energy:</strong> Energy required to remove one mole of electrons from one mole of gaseous atoms to form one mole of gaseous 1+ ions</div>
+                        <div style="margin-bottom:0.75rem;padding:0.75rem;background:#f9fafb;border-radius:0.25rem"><strong>Equation format:</strong> X(g) → X⁺(g) + e⁻</div>
+                        <div style="margin-bottom:0.75rem"><strong>Factors affecting ionisation energy:</strong><ul><li><strong>Nuclear charge:</strong> Greater positive charge attracts electrons more strongly → higher IE</li><li><strong>Number of shells:</strong> More shells means outer electrons further from nucleus → lower IE</li><li><strong>Shielding:</strong> Inner electrons repel outer electrons, reducing effective nuclear charge → lower IE</li><li><strong>Subshells:</strong> Different subshells have different energies → variations in IE trends</li></ul></div>
+                        <div class="tip"><strong>💡 Application Tip:</strong><div style="margin-top:0.25rem">When explaining IE trends, mention ALL relevant factors: nuclear charge, distance from nucleus, and shielding.</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENT AREA B: BONDING -->
+        <div id="tab-B" class="tab-content">
+            <div class="content-area green">
+                <h2>Content Area B: Bonding & Structure</h2>
+                
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">B1.1 Metallic Bonding <span>▼</span></button>
+                    <div class="section-content">
+                        <div class="key-def"><strong>Metallic bonding:</strong> Electrostatic attraction between positive metal ions and delocalized electrons</div>
+                        <div style="margin-bottom:0.75rem"><strong>Structure:</strong> Giant metallic lattice with layers of positive ions in a "sea" of delocalized electrons</div>
+                        <div style="margin-bottom:0.75rem"><strong>Properties linked to structure:</strong><ul><li><strong>High melting point:</strong> Strong metallic bonds throughout structure</li><li><strong>Electrical conductivity:</strong> Mobile delocalized electrons carry charge</li><li><strong>Malleability:</strong> Layers can slide over each other without breaking bonds</li></ul></div>
+                        <div class="tip"><strong>💡 Application Tip:</strong><div style="margin-top:0.25rem">Always link properties to structure and bonding. For conductivity, mention "mobile delocalized electrons".</div></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">B1.2 Ionic Bonding <span>▼</span></button>
+                    <div class="section-content">
+                        <div class="key-def"><strong>Ionic bonding:</strong> Electrostatic attraction between oppositely charged ions</div>
+                        <div style="margin-bottom:0.75rem"><strong>Structure:</strong> Giant ionic lattice with ions in fixed positions</div>
+                        <div style="margin-bottom:0.75rem"><strong>Properties:</strong><ul><li><strong>High melting point:</strong> Strong ionic bonds throughout structure</li><li><strong>Conducts when molten/dissolved:</strong> Ions become mobile and can carry charge</li><li><strong>Brittle:</strong> Layers repel when displaced (like charges align)</li></ul></div>
+                        <div class="tip"><strong>💡 Application Tip:</strong><div style="margin-top:0.25rem">Ionic compounds only conduct when ions are FREE TO MOVE (molten or dissolved), not when solid.</div></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">B1.3 Covalent Bonding <span>▼</span></button>
+                    <div class="section-content">
+                        <div class="key-def"><strong>Covalent bonding:</strong> Electrostatic attraction between two nuclei and a shared pair of electrons between them</div>
+                        <div class="key-def"><strong>Dative covalent bond:</strong> Both electrons in shared pair come from one atom</div>
+                        <div style="margin-bottom:0.75rem"><strong>Types of covalent bonds:</strong><ul><li><strong>Single bond:</strong> One shared pair of electrons</li><li><strong>Double bond:</strong> Two shared pairs of electrons</li><li><strong>Triple bond:</strong> Three shared pairs of electrons</li></ul></div>
+                        <div style="margin-bottom:0.75rem;padding:0.75rem;background:#f9fafb;border-radius:0.25rem"><strong>Molecular orbitals:</strong><br><strong>Sigma (σ) bond:</strong> Head-on overlap along axis between nuclei<br><strong>Pi (π) bond:</strong> Sideways overlap of p orbitals above and below axis</div>
+                        <div class="tip"><strong>💡 Application Tip:</strong><div style="margin-top:0.25rem">Bond strength relationship: Triple > Double > Single. Shorter bonds are stronger.</div></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">B1.5 Molecular Shape (VSEPR) <span>▼</span></button>
+                    <div class="section-content">
+                        <div style="margin-bottom:0.75rem"><strong>Core principle:</strong> Electron pairs repel each other and arrange to minimize repulsion</div>
+                        <div style="margin-bottom:0.75rem"><strong>Shapes to know:</strong><table><thead><tr><th>Shape</th><th>Electron pairs</th><th>Bond angle</th><th>Example</th></tr></thead><tbody><tr><td>Linear</td><td>2</td><td>180°</td><td>CO₂</td></tr><tr><td>Trigonal planar</td><td>3</td><td>120°</td><td>BF₃</td></tr><tr><td>Tetrahedral</td><td>4</td><td>109.5°</td><td>CH₄</td></tr><tr><td>Pyramidal</td><td>3 bonding + 1 lone</td><td>~107°</td><td>NH₃</td></tr><tr><td>Non-linear</td><td>2 bonding + 2 lone</td><td>~104.5°</td><td>H₂O</td></tr></tbody></table></div>
+                        <div class="tip"><strong>💡 Application Tip:</strong><div style="margin-top:0.25rem">Lone pairs repel MORE than bonding pairs, reducing bond angles. Remember specific angles!</div></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">B1.6 Electronegativity & Polarity <span>▼</span></button>
+                    <div class="section-content">
+                        <div class="key-def"><strong>Electronegativity:</strong> Ability of an atom to attract the bonding pair of electrons in a covalent bond</div>
+                        <div style="margin-bottom:0.75rem"><strong>Trend:</strong> Increases across period (increasing nuclear charge), decreases down group (increasing distance/shielding)</div>
+                        <div style="margin-bottom:0.75rem"><strong>Determining polarity:</strong><ul><li><strong>Bond polarity:</strong> Significant electronegativity difference → polar bond (δ+ and δ-)</li><li><strong>Molecular polarity:</strong> Polar bonds + asymmetric shape → polar molecule</li><li>Even with polar bonds, symmetric molecules are non-polar (dipoles cancel)</li></ul></div>
+                        <div class="example"><strong>Example: CO₂ vs H₂O polarity</strong><div style="margin-top:0.5rem"><strong>CO₂:</strong> Linear, polar C=O bonds but dipoles cancel → non-polar molecule<br><strong>H₂O:</strong> Bent shape, polar O-H bonds, dipoles don't cancel → polar molecule</div></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">B1.7 Intermolecular Forces <span>▼</span></button>
+                    <div class="section-content">
+                        <div style="margin-bottom:0.75rem"><strong>Three types (weakest to strongest):</strong><ol><li><strong>Van der Waals forces (London dispersion forces):</strong> Temporary dipole-induced dipole, present in ALL molecules</li><li><strong>Permanent dipole-permanent dipole:</strong> Between polar molecules, stronger than van der Waals forces</li><li><strong>Hydrogen bonding:</strong> Strongest IMF, only when H bonded to F/O/N</li></ol></div>
+                        <div class="key-def"><strong>Hydrogen bonding (exact wording):</strong> Electrostatic attraction between a hydrogen atom bonded to F/O/N (δ+) and a lone pair of electrons on F/O/N in a different molecule (δ-)</div>
+                        <div class="tip"><strong>💡 Application Tip:</strong><div style="margin-top:0.25rem">Van der Waals forces and London dispersion forces are the same thing - both terms are correct.</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENT AREA C: PERIODICITY -->
+        <div id="tab-C" class="tab-content">
+            <div class="content-area purple">
+                <h2>Content Area C: Periodicity</h2>
+                
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">C1.1 Period 3 Physical Properties <span>▼</span></button>
+                    <div class="section-content">
+                        <div style="margin-bottom:0.75rem"><strong>Atomic radius trend:</strong> Decreases across period<ul><li><strong>Explanation:</strong> Nuclear charge increases, electrons in same shell, similar shielding, electrons pulled closer</li></ul></div>
+                        <div style="margin-bottom:0.75rem"><strong>Melting point trend:</strong> Na < Mg < Al (increases), Si (high), then P₄, S₈, Cl₂, Ar (low)<ul><li><strong>Na, Mg, Al:</strong> Metallic bonding, increasing strength</li><li><strong>Si:</strong> Giant covalent structure, very strong covalent bonds</li><li><strong>P₄, S₈, Cl₂, Ar:</strong> Simple molecular, weak intermolecular forces</li></ul></div>
+                        <div class="tip"><strong>💡 Application Tip:</strong><div style="margin-top:0.25rem">Always link melting point to STRUCTURE and BONDING type, not just "strong bonds".</div></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">C1.2 Oxidation Numbers & Redox <span>▼</span></button>
+                    <div class="section-content">
+                        <div style="margin-bottom:0.75rem"><strong>Rules (must memorize):</strong><ol><li>Element in uncombined state: 0</li><li>Monoatomic ion: charge on ion</li><li>Sum in neutral compound: 0</li><li>Sum in polyatomic ion: charge on ion</li><li>Hydrogen: usually +1 (except -1 in metal hydrides)</li><li>Oxygen: usually -2 (except -1 in peroxides, +2 in OF₂)</li><li>Group 1: always +1; Group 2: always +2</li></ol></div>
+                        <div class="key-def"><strong>Oxidation:</strong> Loss of electrons / increase in oxidation number</div>
+                        <div class="key-def"><strong>Reduction:</strong> Gain of electrons / decrease in oxidation number</div>
+                        <div class="example"><strong>Example: Oxidation number in SO₄²⁻</strong><div style="margin-top:0.5rem">Let S = x<br>x + 4(-2) = -2<br>x - 8 = -2<br>x = +6</div></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">C1.3 Reactions of Period 3 Elements <span>▼</span></button>
+                    <div class="section-content">
+                        <div style="margin-bottom:0.75rem"><strong>With oxygen (products to know):</strong><ul><li>4Na + O₂ → 2Na₂O</li><li>2Mg + O₂ → 2MgO</li><li>4Al + 3O₂ → 2Al₂O₃</li><li>P₄ + 5O₂ → P₄O₁₀</li><li>S + O₂ → SO₂</li></ul></div>
+                        <div style="margin-bottom:0.75rem"><strong>With water:</strong><ul><li>2Na + 2H₂O → 2NaOH + H₂ (vigorous, cold water)</li><li>Mg + H₂O → Mg(OH)₂ + H₂ (steam only)</li></ul></div>
+                        <div class="tip"><strong>💡 Application Tip:</strong><div style="margin-top:0.25rem">Know conditions (cold water vs steam) and observations (vigor of reaction).</div></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">C1.5 Acid-Base Behaviour <span>▼</span></button>
+                    <div class="section-content">
+                        <div style="margin-bottom:0.75rem"><strong>Period 3 oxide trend:</strong><ul><li><strong>Metal oxides (Na₂O, MgO):</strong> Basic</li><li><strong>Al₂O₃:</strong> Amphoteric (reacts with both acids and bases)</li><li><strong>Non-metal oxides (P₄O₁₀, SO₂):</strong> Acidic</li></ul></div>
+                        <div style="margin-bottom:0.75rem"><strong>Acids formed in water:</strong><ul><li>P₄O₁₀ → H₃PO₄ (phosphoric acid)</li><li>SO₂/SO₃ → H₂SO₄ (sulfuric acid)</li></ul></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">C1.6 Chlorides with Water <span>▼</span></button>
+                    <div class="section-content">
+                        <div style="margin-bottom:0.75rem"><strong>Reactions producing HCl (acidic):</strong><table><thead><tr><th>Chloride</th><th>pH</th><th>Reaction</th></tr></thead><tbody><tr><td>NaCl</td><td>~7</td><td>Dissolves, neutral</td></tr><tr><td>MgCl₂</td><td>~6</td><td>Dissolves, slightly acidic</td></tr><tr><td>Al₂Cl₆</td><td>~3</td><td>Hydrolysis produces HCl</td></tr><tr><td>SiCl₄</td><td>~2</td><td>Vigorous hydrolysis</td></tr><tr><td>PCl₅</td><td>~1</td><td>Violent hydrolysis</td></tr></tbody></table></div>
+                        <div class="tip"><strong>💡 Application Tip:</strong><div style="margin-top:0.25rem">Learn the pH trend: becomes more acidic across period as chlorides hydrolyze more readily.</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENT AREA D: PHYSICAL CHEMISTRY -->
+        <div id="tab-D" class="tab-content">
+            <div class="content-area orange">
+                <h2>Content Area D: Physical Chemistry</h2>
+                
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">D1.1 The Mole Concept <span>▼</span></button>
+                    <div class="section-content">
+                        <div class="key-def"><strong>The mole:</strong> One mole of any substance contains the same number of particles as there are atoms in exactly 12.00g of carbon-12</div>
+                        <div class="key-def"><strong>Avogadro constant:</strong> 6.02 × 10²³ mol⁻¹</div>
+                        <div class="key-def"><strong>Molar mass:</strong> Mass in grams of one mole of a substance (units: g mol⁻¹)</div>
+                        <div class="key-def"><strong>Concentration:</strong> Number of moles of substance dissolved in water to produce a volume of 1 dm³ of solution (units: mol dm⁻³)</div>
+                        <div style="margin-bottom:0.75rem;padding:0.75rem;background:#f9fafb;border-radius:0.25rem"><strong>Essential formulae:</strong><ul><li>n = m/M (moles = mass / molar mass)</li><li>Number of particles = n × 6.02 × 10²³</li><li>n = V/24 (for gases at RTP, V in dm³)</li><li>n = cV (moles = concentration × volume in dm³)</li><li>% yield = (actual yield / theoretical yield) × 100</li></ul></div>
+                        <div class="example"><strong>Example: Calculate moles in 5.3g of Na₂CO₃</strong><div style="margin-top:0.5rem">M(Na₂CO₃) = (2×23) + 12 + (3×16) = 106 g mol⁻¹<br>n = m/M = 5.3/106 = <strong>0.05 mol</strong></div></div>
+                        <div class="tip"><strong>💡 Application Tip:</strong><div style="margin-top:0.25rem">ALWAYS convert cm³ to dm³ by dividing by 1000. ALWAYS include units in final answer.</div></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">D1.2 Chemical Kinetics <span>▼</span></button>
+                    <div class="section-content">
+                        <div style="margin-bottom:0.75rem"><strong>Factors affecting rate (explain using collision theory):</strong><ul><li><strong>Concentration:</strong> More particles per unit volume → more frequent collisions → faster rate</li><li><strong>Pressure (gases):</strong> More particles in same space → more frequent collisions → faster rate</li><li><strong>Temperature:</strong> Particles have more kinetic energy → more frequent collisions AND more collisions exceed Ea → faster rate</li><li><strong>Surface area:</strong> More surface exposed → more collisions possible → faster rate</li><li><strong>Catalyst:</strong> Provides alternative pathway with lower Ea → more collisions exceed Ea → faster rate</li></ul></div>
+                        <div class="key-def"><strong>Catalyst:</strong> Speeds up rate of reaction without altering products, being itself unchanged chemically and in mass at end of reaction</div>
+                        <div class="key-def"><strong>Activation energy:</strong> Minimum energy required for a reaction to occur</div>
+                        <div class="tip"><strong>💡 Application Tip:</strong><div style="margin-top:0.25rem">For temperature effects, mention BOTH more frequent collisions AND more particles exceeding Ea.</div></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">D1.3 Chemical Energetics <span>▼</span></button>
+                    <div class="section-content">
+                        <div class="key-def"><strong>Enthalpy change (ΔH):</strong> Heat energy change at constant pressure</div>
+                        <div class="key-def"><strong>Exothermic:</strong> ΔH is negative, products have less energy than reactants, heat released</div>
+                        <div class="key-def"><strong>Endothermic:</strong> ΔH is positive, products have more energy than reactants, heat absorbed</div>
+                        <div style="margin-bottom:0.75rem;padding:0.75rem;background:#f9fafb;border-radius:0.25rem"><strong>Standard conditions:</strong> 100 kPa pressure, 298 K (25°C), 1 mol dm⁻³ concentration</div>
+                        <div class="key-def"><strong>Δ_fH°:</strong> Standard enthalpy change of formation: Enthalpy change when one mole of a substance is formed from its elements in their standard states</div>
+                        <div class="key-def"><strong>Δ_cH°:</strong> Standard enthalpy change of combustion: Enthalpy change when one mole of a substance is burnt completely in oxygen</div>
+                        <div style="margin-bottom:0.75rem"><strong>Hess's Law calculations:</strong><ul><li>Formation: ΔH° = Σ Δ_fH°(products) - Σ Δ_fH°(reactants)</li><li>Combustion: ΔH° = Σ Δ_cH°(reactants) - Σ Δ_cH°(products)</li><li>Calorimetry: Q = mcΔT</li></ul></div>
+                        <div class="tip"><strong>💡 Application Tip:</strong><div style="margin-top:0.25rem">Check signs carefully! For formation route: products minus reactants. For combustion route: reactants minus products.</div></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">D1.4 Chemical Equilibrium <span>▼</span></button>
+                    <div class="section-content">
+                        <div class="key-def"><strong>Dynamic equilibrium:</strong> In a closed system, the rate of forward reaction equals the rate of backward reaction, and concentrations of reactants and products remain constant (but both reactions continue)</div>
+                        <div style="margin-bottom:0.75rem"><strong>Le Chatelier's Principle:</strong> When a system at equilibrium is subjected to a change, the position of equilibrium shifts to oppose that change</div>
+                        <div style="margin-bottom:0.75rem"><strong>Effects on equilibrium:</strong><ul><li><strong>Concentration increase:</strong> Equilibrium shifts to use up added substance</li><li><strong>Pressure increase:</strong> Equilibrium shifts to side with fewer gas molecules</li><li><strong>Temperature increase:</strong> Equilibrium shifts in endothermic direction</li><li><strong>Catalyst:</strong> NO effect on position, but equilibrium reached faster</li></ul></div>
+                        <div style="margin-bottom:0.75rem;padding:0.75rem;background:#f9fafb;border-radius:0.25rem"><strong>Kc expression:</strong> For aA + bB ⇌ cC + dD<br>Kc = [C]ᶜ[D]ᵈ / [A]ᵃ[B]ᵇ<br><em>Exclude solids and pure liquids from expression</em></div>
+                        <div class="tip"><strong>💡 Application Tip:</strong><div style="margin-top:0.25rem">Only TEMPERATURE changes the value of K. Concentration, pressure, and catalyst do NOT change K.</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENT AREA E: ORGANIC CHEMISTRY -->
+        <div id="tab-E" class="tab-content">
+            <div class="content-area pink">
+                <h2>Content Area E: Organic Chemistry</h2>
+                
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">E1.1 Key Terms & Nomenclature <span>▼</span></button>
+                    <div class="section-content">
+                        <div class="key-def"><strong>Saturated hydrocarbon:</strong> Contains only single C-C bonds</div>
+                        <div class="key-def"><strong>Unsaturated hydrocarbon:</strong> Contains at least one C=C double bond</div>
+                        <div class="key-def"><strong>Homologous series:</strong> Family of compounds with same functional group, same general formula, similar chemical properties, gradual change in physical properties</div>
+                        <div style="margin-bottom:0.75rem"><strong>General formulae to memorize:</strong><ul><li>Alkanes: CₙH₂ₙ₊₂</li><li>Alkenes: CₙH₂ₙ</li><li>Halogenoalkanes: CₙH₂ₙ₊₁X</li><li>Alcohols: CₙH₂ₙ₊₁OH</li></ul></div>
+                        <div style="margin-bottom:0.75rem"><strong>IUPAC naming rules (up to 6 carbons):</strong><ol><li>Identify longest carbon chain (parent name)</li><li>Number from end giving lowest numbers</li><li>Name substituents with position numbers</li><li>Multiple identical: di-, tri-, tetra-</li><li>List alphabetically</li></ol></div>
+                        <div class="tip"><strong>💡 Application Tip:</strong><div style="margin-top:0.25rem">Parent names: methane, ethane, propane, butane, pentane, hexane. Check spelling!</div></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">E1.4 Isomerism <span>▼</span></button>
+                    <div class="section-content">
+                        <div style="margin-bottom:0.75rem"><strong>Structural isomerism:</strong> Same molecular formula, different structural arrangement<ul><li>Chain isomers: Different carbon skeletons</li><li>Position isomers: Functional group in different positions</li><li>Functional group isomers: Different functional groups</li></ul></div>
+                        <div style="margin-bottom:0.75rem"><strong>E/Z isomerism (stereoisomerism):</strong><ul><li>Requires C=C double bond (no rotation)</li><li>Two different groups on each carbon of double bond</li><li><strong>E isomer:</strong> Higher priority groups on opposite sides</li><li><strong>Z isomer:</strong> Higher priority groups on same side</li><li>Priority by atomic number (Cahn-Ingold-Prelog rules)</li></ul></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">E1.7 Addition Reactions of Alkenes <span>▼</span></button>
+                    <div class="section-content">
+                        <div style="margin-bottom:0.75rem"><strong>Hydrogenation:</strong> Alkene + H₂ → alkane<ul><li>Conditions: Ni catalyst, 150°C</li><li>Example: CH₂=CH₂ + H₂ → CH₃CH₃</li></ul></div>
+                        <div style="margin-bottom:0.75rem"><strong>Halogenation:</strong> Alkene + X₂ → dihaloalkane<ul><li>Conditions: Room temperature</li><li>Example: CH₂=CH₂ + Br₂ → CH₂BrCH₂Br</li></ul></div>
+                        <div style="margin-bottom:0.75rem"><strong>Addition of hydrogen halides:</strong> Alkene + HX → halogenoalkane<ul><li>Conditions: Room temperature</li><li>Markovnikov's rule: H adds to carbon with more H atoms</li></ul></div>
+                        <div style="margin-bottom:0.75rem"><strong>Hydration:</strong> Alkene + H₂O → alcohol<ul><li>Conditions: Conc. H₃PO₄ catalyst, 300°C, 60 atm</li><li>Example: CH₂=CH₂ + H₂O → CH₃CH₂OH</li></ul></div>
+                        <div class="tip"><strong>💡 Application Tip:</strong><div style="margin-top:0.25rem">Learn all conditions! Exams frequently test reaction conditions.</div></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">E1.7 Substitution & Elimination Reactions <span>▼</span></button>
+                    <div class="section-content">
+                        <div style="margin-bottom:0.75rem"><strong>Substitution of halogenoalkanes (with aqueous NaOH):</strong><ul><li>Halogenoalkane + NaOH(aq) → alcohol + NaX</li><li>Conditions: Heat under reflux with aqueous NaOH</li><li>Example: CH₃CH₂Br + NaOH → CH₃CH₂OH + NaBr</li></ul></div>
+                        <div style="margin-bottom:0.75rem"><strong>Elimination of halogenoalkanes (with ethanolic NaOH):</strong><ul><li>Halogenoalkane + NaOH(ethanol) → alkene + NaX + H₂O</li><li>Conditions: Heat under reflux with ethanolic NaOH</li><li>Competes with substitution</li></ul></div>
+                        <div style="margin-bottom:0.75rem"><strong>Substitution of alcohols with PCl₅:</strong><ul><li>Alcohol + PCl₅ → halogenoalkane + POCl₃ + HCl</li><li>Observation: Steamy fumes of HCl</li></ul></div>
+                        <div class="tip"><strong>💡 Application Tip:</strong><div style="margin-top:0.25rem">Aqueous NaOH = substitution. Ethanolic NaOH = elimination. Know the difference!</div></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">E1.7 Oxidation & Esterification <span>▼</span></button>
+                    <div class="section-content">
+                        <div style="margin-bottom:0.75rem"><strong>Oxidation of primary alcohols:</strong><ul><li>Primary alcohol + [O] → carboxylic acid + H₂O</li><li>Conditions: Heat under reflux with acidified K₂Cr₂O₇</li><li>Observation: Orange to green color change</li><li>Example: CH₃CH₂OH + 2[O] → CH₃COOH + H₂O</li></ul></div>
+                        <div style="margin-bottom:0.75rem"><strong>Esterification (condensation):</strong><ul><li>Alcohol + carboxylic acid ⇌ ester + water</li><li>Conditions: Conc. H₂SO₄ catalyst, heat</li><li>Reversible reaction</li><li>Example: CH₃OH + CH₃COOH ⇌ CH₃COOCH₃ + H₂O</li></ul></div>
+                        <div class="tip"><strong>💡 Application Tip:</strong><div style="margin-top:0.25rem">For oxidation, always mention the color change (orange to green) as an observation.</div></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">E1.8 Industrial Reactions <span>▼</span></button>
+                    <div class="section-content">
+                        <div style="margin-bottom:0.75rem"><strong>Cracking:</strong><ul><li>Large alkane → smaller alkane + alkene</li><li><strong>Thermal:</strong> 700-1000°C, high pressure</li><li><strong>Catalytic:</strong> 450°C, zeolite catalyst</li><li>Purpose: Meet demand for smaller, more useful molecules</li></ul></div>
+                        <div style="margin-bottom:0.75rem"><strong>Addition polymerization:</strong><ul><li>Many alkene molecules join to form long chain</li><li>No other products formed</li><li>Examples: poly(ethene), poly(propene), PVC, PTFE</li></ul></div>
+                        <div style="margin-bottom:0.75rem"><strong>Condensation polymerization:</strong><ul><li>Monomers with two functional groups join</li><li>Small molecule (usually H₂O) eliminated each time</li><li>Polyesters: Dicarboxylic acid + diol → polyester + water</li></ul></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COMMAND WORDS -->
+        <div id="tab-CMD" class="tab-content">
+            <div class="content-area gray">
+                <h2>Command Words & Exam Guidance</h2>
+                
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">Critical Command Words - Exact Definitions <span>▼</span></button>
+                    <div class="section-content">
+                        <div style="margin-bottom:0.75rem;padding:0.75rem;background:#fef2f2;border-left:4px solid #ef4444;border-radius:0.25rem"><strong style="color:#991b1b">⚠️ These definitions are from official Pearson documentation</strong><div style="margin-top:0.25rem;font-size:0.875rem">Understanding these precisely is essential for exam success</div></div>
+                        <div style="margin-bottom:1rem;padding:0.75rem;background:white;border:1px solid #d1d5db;border-radius:0.25rem"><strong style="font-size:1.125rem">Calculate</strong><p style="margin-top:0.25rem">Obtain numerical answer, showing relevant working and appropriate units where required</p><div style="margin-top:0.5rem;font-size:0.875rem;color:#6b7280">Always show working. Always include units.</div></div>
+                        <div style="margin-bottom:1rem;padding:0.75rem;background:white;border:1px solid #d1d5db;border-radius:0.25rem"><strong style="font-size:1.125rem">Compare</strong><p style="margin-top:0.25rem">Look for similarities AND differences. Answer must relate to both/all things mentioned</p><div style="margin-top:0.5rem;font-size:0.875rem;color:#6b7280">Must discuss BOTH items. Use "whereas", "however", "in contrast".</div></div>
+                        <div style="margin-bottom:1rem;padding:0.75rem;background:white;border:1px solid #d1d5db;border-radius:0.25rem"><strong style="font-size:1.125rem">Explain</strong><p style="margin-top:0.25rem">Requires justification/exemplification. Must contain reasoning. Mark scheme:</p><ul style="font-size:0.875rem"><li>1 mark: Identification of point</li><li>2 marks: Identification + linked justification</li><li>3 marks: Identification + two linked justifications OR further development</li></ul><div style="margin-top:0.5rem;font-size:0.875rem;color:#6b7280">Use "because", "this is due to", "as a result". Link statements.</div></div>
+                        <div style="margin-bottom:1rem;padding:0.75rem;background:white;border:1px solid #d1d5db;border-radius:0.25rem"><strong style="font-size:1.125rem">Evaluate</strong><p style="margin-top:0.25rem">Review information, bring together to form conclusion. Use evidence including strengths, weaknesses, alternatives. Make supported judgement</p></div>
+                        <div style="margin-bottom:1rem;padding:0.75rem;background:white;border:1px solid #d1d5db;border-radius:0.25rem"><strong style="font-size:1.125rem">Discuss</strong><p style="margin-top:0.25rem">Identify the issue. Explore all aspects. Investigate by reasoning or argument. Does NOT require conclusion</p></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection(this)">Common Errors to Avoid <span>▼</span></button>
+                    <div class="section-content">
+                        <div style="margin-bottom:0.75rem;padding:0.75rem;background:#fef3c7;border-left:4px solid #fbbf24;border-radius:0.25rem"><strong>❌ Error #1: Missing or incorrect units</strong><p style="margin-top:0.25rem;font-size:0.875rem">Calculations without units lose marks even if number correct.</p><p style="margin-top:0.25rem;font-size:0.875rem;font-weight:600">✓ Fix: Always write units at each step, check they match question requirements</p></div>
+                        <div style="margin-bottom:0.75rem;padding:0.75rem;background:#fef3c7;border-left:4px solid #fbbf24;border-radius:0.25rem"><strong>❌ Error #2: Not showing working</strong><p style="margin-top:0.25rem;font-size:0.875rem">Final answer alone may not gain full marks.</p><p style="margin-top:0.25rem;font-size:0.875rem;font-weight:600">✓ Fix: Show every step, even if obvious to you</p></div>
+                        <div style="margin-bottom:0.75rem;padding:0.75rem;background:#fef3c7;border-left:4px solid #fbbf24;border-radius:0.25rem"><strong>❌ Error #3: Insufficient explanation</strong><p style="margin-top:0.25rem;font-size:0.875rem">Single word or phrase when justification needed. Describing WHAT without explaining WHY.</p><p style="margin-top:0.25rem;font-size:0.875rem;font-weight:600">✓ Fix: Use "because" or "this is due to" to link statements</p></div>
+                        <div style="margin-bottom:0.75rem;padding:0.75rem;background:#fef3c7;border-left:4px solid #fbbf24;border-radius:0.25rem"><strong>❌ Error #4: Generic answers</strong><p style="margin-top:0.25rem;font-size:0.875rem">Not using data/information given in question.</p><p style="margin-top:0.25rem;font-size:0.875rem;font-weight:600">✓ Fix: Reference specific values, data, or context from question</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Click sections to expand/collapse • Use Print button for hard copy</p>
+            <p>Based on Pearson AAQ Applied Science Unit 2 specification and mark scheme language</p>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('tab-' + tabId).classList.add('active');
+            event.target.classList.add('active');
+        }
+        function toggleSection(header) {
+            const content = header.nextElementSibling;
+            const arrow = header.querySelector('span');
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                arrow.textContent = '▼';
+            } else {
+                content.classList.add('active');
+                arrow.textContent = '▲';
+            }
+        }
+    </script>
+</body>
+</html>
